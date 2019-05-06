@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Bob Loblaw Law Blog</h1>
+
+<hr />
+
+{% if posts|length == 0 %}
+<p>No posts yet!</p>
+
+{% else %}
+
+    {% for post in posts %}
+    <ul>
+    <a href="/blog?id={{ post.id }}">{{ post.title }}</a>
+    <p>{{ post.body }}</p>
+    <hr />
+    </ul>
+    {% endfor %}
+
+{% endif %}
+
+
+{% if error %}
+    <p class="error">{{ error }}</p>
+{% endif %}
+
+{% endblock %}
