@@ -14,6 +14,7 @@ class Blog(db.Model):
     title = db.Column(db.String(120))
     body = db.Column(db.Text)
     
+    
     def __init__(self, title, body):
         self.title = title
         self.body = body
@@ -48,7 +49,7 @@ def new_post():
             return render_template("newpost.html", title="New Entry", title_error=title_error, body_error=body_error, 
                 blog_title=blog_title, blog_body=blog_body)
     
-    #return render_template("newpost.html", title="New Entry")
+    return render_template("newpost.html", title="New Entry")
 
 
 @app.route("/blog")
@@ -72,3 +73,6 @@ def index():
 
 if  __name__ == "__main__":
     app.run()
+
+
+#<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
