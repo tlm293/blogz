@@ -3,22 +3,34 @@
 
     <h1>Add a Blog Entry</h1>
     <form method="POST">
-        <label>Title of Blog Post
-            <input type="text" name="blog-title" />
-        </label>
-        <p class="error">{{ title_error }}</p>
-        <br>
-        <label>Blog Entry
-        <textarea name="blog-entry">{{ blog_body }}</textarea>
-        </label>
-        <p class="error">{{ body_error }}</p>
-        <input type="submit" value="Add Entry" />
+        
 
+        <table>
+            <tr>
+                <td>
+                    <label>Title of Blog Post</label>
+                </td>
+                <td>
+                    <input type="text" name="blog-title" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Blog Entry</label>
+                </td>
+                <td>
+                    <textarea name="blog-entry">{{ blog_body }}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Add Entry" />
+                </td>
+            </tr>
+        </table>
     </form>
+    
 
 
-{% if error %}
-    <p class="error">{{ error }}</p>
-{% endif %}
 
 {% endblock %}

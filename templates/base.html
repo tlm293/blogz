@@ -5,26 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ title }}</title>
-     
+    
     <style>
-            .error {
-                color: red;
-            }
-        </style>
+        .error {
+            color: red;
+        }
 
+
+        .navbar_right {
+            text-align: right;
+            padding-left: 20px;
+
+        }
+
+        .navbar_left {
+            text-align: left;
+            padding-left: 20px;
+
+        }
+    </style>
     
 </head>
 <body>
+    
     <nav>
-        <a href = "/logout" >Log out</a>
-        <a href="/blog">Main Blog Page</a>
-        <a href="/newpost">Add a Blog Entry</a>
+            
+        <a class="navbar_left" href = "/">Home</a>
+        <a class="navbar_left" href="/blog">Main Blog Page</a>
+        <a class="navbar_left" href="/newpost">Add a Blog Entry</a>
+        <a class="navbar_right" href = "/logout">Log out</a>
+        <a class="navbar_right" href = "/login">Login</a>        
     </nav>
+    
 
     {% with messages = get_flashed_messages(with_categories=True) %}
         <ul>
-        {% for category,message in messages %}
-            <li class="{{category}}">{{messages}}</li>
+        {% for category, message in messages %}
+            <li class="{{category}}">{{  message  }}</li>
         {% endfor %}
         </ul>
     {% endwith %}

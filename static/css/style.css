@@ -11,12 +11,12 @@ h1 {
 }
 
 a {
-    text-align: center;
+    color: hotpink;
+    text-align: right;
     padding-right: 50px;
-
 }
 
-
-.error {
+.flash.error {
     color: red;
     }
+

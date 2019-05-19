@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1>Blogz</h1>
+<h1>Blogz Posts!</h1>
 
 <hr />
 
@@ -15,7 +15,7 @@
     <ul>
     <a href="/blog?id={{ post.id }}">{{ post.title }}</a>
     <p>{{ post.body }}</p>
-    <p>Written by: <a href="/blog?user={{ post.owner_id }}">{{ post.owner.username }}</a></p>
+    
     <hr />
     </ul>
     {% endfor %}
